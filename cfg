@@ -1,0 +1,4 @@
+./configure \
+  --with-document-root=/data/www --with-app-name=idp-preauth \
+  --with-fcgi=yes 
+

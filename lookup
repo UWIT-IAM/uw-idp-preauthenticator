@@ -1,0 +1,9 @@
+id="$1"
+[[ -z $id ]] && {
+  echo "usage: $0 userid"
+  exit 1
+}
+
+ldapsearch -h eds.u.washington.edu -p 389 \
+    -b "dc=washington,dc=edu"  -v  -d 0 -Z  -Y EXTERNAL \
+    -s subtree "(uwnetid=$id)"
